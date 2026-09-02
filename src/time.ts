@@ -4,16 +4,16 @@ export function initializeTime(): void {
         return;
     }
 
-    const updateTime = (): void => {
-        const now = new Date();
+    const formatter = new Intl.DateTimeFormat("en-PH", {
+        timeZone: "Asia/Manila",
+        hour: "numeric",
+        minute: "2-digit",
+        second: "2-digit",
+    });
 
-        timeElement.textContent = new Intl.DateTimeFormat("en-PH", {
-            timeZone: "Asia/Manila",
-            hour: "numeric",
-            minute: "2-digit",
-            second: "2-digit",
-        }).format(now);
-    }
+    const updateTime = (): void => {
+        timeElement.textContent = formatter.format(new Date());
+    };
 
     updateTime();
     setInterval(updateTime, 1000);
