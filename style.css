@@ -56,7 +56,7 @@ body {
         "Open Sans",
         "Helvetica Neue",
         sans-serif;
-    
+
     padding: 2rem;
     margin: 0;
 }
@@ -117,8 +117,13 @@ header {
     margin-bottom: 3rem;
 }
 
-header p {
-    color: var(--text-muted)
+header > div {
+    text-align: center;
+}
+
+header > p {
+    color: var(--text-muted);
+    font-size: 1.25rem;
 }
 
 header > h1 {
@@ -188,6 +193,12 @@ section p {
     padding: 1.5rem;
     border: 1px solid #242424;
     border-radius: 10px;
+
+    transition: transform 0.2s ease;
+}
+
+#interests > ul > li:hover {
+    transform: translateY(-6px);
 }
 
 #fandoms ul {
@@ -213,13 +224,30 @@ nav > ul {
 }
 
 nav a {
+    display: inline-block;
     color: var(--text-muted);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-nav a:hover {
+nav ul li {
+    transition: transform 0.2s ease;
+}
+
+nav ul:hover li {
+    transform: translateX(-10px);
+}
+
+nav ul li:hover a {
     color: var(--accent);
+    transform: scale(1.1);
+}
+nav ul li:hover {
+    transform: translateX(0);
+}
+
+nav ul li:hover ~ li {
+    transform: translateX(10px);
 }
 
 a {
@@ -234,4 +262,13 @@ a:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 4px;
     border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 0.85rem;
 }
