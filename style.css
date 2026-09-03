@@ -201,6 +201,14 @@ section p {
     transform: translateY(-6px);
 }
 
+.divider {
+    margin-bottom: 0 !important;
+}
+
+.below-divider {
+    margin-top: 0 !important;
+}
+
 #fandoms ul {
     margin: 0;
     padding-left: 1.5rem;
