@@ -1,4 +1,4 @@
-export function initializeTime(): void {
+export function initTime(): void {
     const timeElement = document.querySelector("#local-time");
     if (!(timeElement instanceof HTMLElement)) {
         return;

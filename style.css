@@ -117,7 +117,21 @@ header {
     margin-bottom: 3rem;
 }
 
-header > div {
+#prof-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #303030;
+}
+
+header div {
     text-align: center;
 }
 
@@ -180,6 +194,26 @@ section p {
     max-width: 70ch;
 }
 
+button {
+    background: var(--background);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    font-family: inherit;
+    border-radius: 8px;
+    padding: 8px 16px;
+
+    transition: transform 0.15s ease;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.05);
+    cursor:pointer;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
 #interests > ul {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -223,6 +257,23 @@ section p {
     margin-bottom: 0.35rem;
 }
 
+#fun {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+#fun > div {
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: transform 0.2s ease;
+}
+
+#fun > div:hover {
+    transform: translateY(-3px);
+}
+
 nav > ul {
     display: flex;
     gap: 1.5rem;
@@ -235,7 +286,16 @@ nav a {
     display: inline-block;
     color: var(--text-muted);
     text-decoration: none;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+nav ul {
+    display: flex;
+    gap: 12px;
+    padding: 1.25rem;
+    margin: 0;
 }
 
 nav ul li {

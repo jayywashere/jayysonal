@@ -1,3 +1,5 @@
-import { initializeTime } from "./time.js";
+import { initTime } from "./time.js";
+import { initFun } from "./fun.js";
 
-initializeTime();
+initTime();
+initFun();
