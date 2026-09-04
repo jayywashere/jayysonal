@@ -331,6 +331,17 @@ button:active {
     transform: translateY(-3px);
 }
 
+#dog-img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    margin: 1rem 0;
+}
+
 nav > ul {
     display: flex;
     gap: 1.5rem;
