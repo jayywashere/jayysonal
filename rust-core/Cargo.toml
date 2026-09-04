@@ -1,0 +1,10 @@
+[package]
+name = "rust-core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+wasm-bindgen = "0.2.127"
+
+[lib]
+crate-type = ["cdylib", "rlib"]

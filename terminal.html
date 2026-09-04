@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NEUTRAL.exe</title>
+
+        <link rel="stylesheet" href="terminal.css" />
+    </head>
+    <body>
+        <!-- * this resembles the uhh the tab of an open program/window (includes the minimize, maximize, and quit) -->
+        <header>
+            <h1>NEUTRAL.exe</h1>
+
+            <nav>
+                <!-- quit -->
+                <a href="index.html">X</a>
+            </nav>
+        </header>
+
+        <!-- * center area (content) -->
+        <!-- * wasm will insert new tags (like <p>) inside here -->
+        <main id="terminal-screen"></main>
+
+        <!-- * bottom area (commands / cli) -->
+        <footer>
+            <div class="cli-row">
+                <span id="prompt"
+                    ><span id="username">guest</span>@neutral:~!$</span
+                >
+                <input
+                    type="text"
+                    id="cli-input"
+                    autofocus
+                    placeholder="Enter a command."
+                />
+            </div>
+        </footer>
+
+        <script type="module" src="src/terminal/main.js"></script>
+    </body>
+</html>

@@ -3,3 +3,6 @@ dist/
 target/
 .vscode/
 *.log
+
+rust-core/target/
+src/terminal/pkg/
