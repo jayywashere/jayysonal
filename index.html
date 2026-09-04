@@ -29,11 +29,14 @@
         -->
     </head>
     <body>
+        <!-- reading progress bar/indicator -->
+        <progress id="reading-progress" value="0" max="100"></progress>
+
         <!-- (introductory) head area -->
         <header>
             <div>
                 <div id="prof-row">
-                    <img src="assets/icons/pfp.jpg" alt="" />
+                    <img id="pfp-icon" src="assets/icons/pfp.jpg" alt="" />
                     <h1>jayysonal</h1>
                 </div>
 
@@ -45,26 +48,31 @@
                 </p>
             </div>
 
-            <!-- navigation area -->
-            <nav>
-                <ul>
-                    <li><a href="#about-me">About</a></li>
-                    <li><a href="#currently">Currently</a></li>
-                    <li><a href="#interests">Interests</a></li>
-                    <li><a href="#commission">Commission</a></li>
-                    <li><a href="#fandoms">Fandoms</a></li>
-                    <li><a href="#fun">Fun</a></li>
-                    <li><a href="#links">Links</a></li>
-                    <li><a href="terminal.html">Terminal</a></li>
+            <div id="header-right">
+                <!-- dark/light mode -->
+                <button id="theme-btn" type="button">☀️ Light</button>
 
-                    <!-- ? TBImplemented: <li><a href="#guestbook">Guestbook</a></li> -->
-                    <!-- ?
-                    ? may not be implemented because i cannot host this in a 24/7 server
-                    ? that requires a dang subscription periodically
-                    ? especially for some quickie project like this
-                    -->
-                </ul>
-            </nav>
+                <!-- navigation area -->
+                <nav>
+                    <ul>
+                        <li><a href="#about-me">About</a></li>
+                        <li><a href="#currently">Currently</a></li>
+                        <li><a href="#interests">Interests</a></li>
+                        <li><a href="#commission">Commission</a></li>
+                        <li><a href="#fandoms">Fandoms</a></li>
+                        <li><a href="#fun">Fun</a></li>
+                        <li><a href="#links">Links</a></li>
+                        <li><a href="terminal.html">Terminal</a></li>
+
+                        <!-- ? TBImplemented: <li><a href="#guestbook">Guestbook</a></li> -->
+                        <!-- ?
+                        ? may not be implemented because i cannot host this in a 24/7 server
+                        ? that requires a dang subscription periodically
+                        ? especially for some quickie project like this
+                        -->
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <!-- (content) body area -->
