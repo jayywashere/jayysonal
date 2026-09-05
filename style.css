@@ -166,6 +166,16 @@ h4 {
     padding: 4px 8px;
 
     z-index: 9998;
+
+    opacity: 1;
+    transition:
+        transform 0.2s,
+        opacity 0.2s;
+}
+
+#now-playing:hover {
+    transform: translateY(-4px);
+    opacity: 0.75;
 }
 
 #disc {
@@ -348,6 +358,42 @@ button:hover {
 
 button:active {
     transform: translateY(1px);
+}
+
+#thoughts > ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(1fr));
+
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+#thoughts > ul > li {
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid var(--accent);
+    background: var(--background);
+    border-radius: 0 10px 10px 0;
+
+    font-style: italic;
+    color: var(--text);
+
+    transition: transform 0.2s ease;
+}
+
+#thoughts > ul > li:hover {
+    transform: translateY(-4px);
+}
+
+#thoughts > ul > li > strong {
+    display: block;
+    margin-bottom: 0.5rem;
+
+    font-style: normal;
+    font-family: monospace;
+    color: var(--accent-muted);
 }
 
 #interests > ul {
