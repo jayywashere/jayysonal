@@ -3,6 +3,7 @@ import { initFun } from "./fun.js";
 import { initProfilePic } from "./profile.js";
 import { initTheme } from "./theme.js";
 import { initReadingProgress } from "./reading-progress.js";
+import { initBgm } from "./bgm.js";
 
 function main(): void {
     initTime();
@@ -10,6 +11,7 @@ function main(): void {
     initProfilePic();
     initTheme();
     initReadingProgress();
+    initBgm();
 }
 
 main();
