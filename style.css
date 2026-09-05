@@ -467,6 +467,48 @@ button:active {
     margin: 1rem 0;
 }
 
+#messages form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#messages textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 0.75rem;
+    box-sizing: border-box;
+
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+
+    resize: vertical;
+}
+
+#messages textarea::placeholder {
+    opacity: 0.6;
+}
+
+#messages button {
+    width: fit-content;
+    padding: 0.6rem 1rem;
+
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+#messages button:hover {
+    opacity: 0.75;
+}
+
 nav > ul {
     display: flex;
     gap: 1.5rem;
