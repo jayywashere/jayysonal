@@ -19,6 +19,8 @@
     --surface: #181818;
     --border: #242424;
     --image-border: #303030;
+
+    --grid-opacity: 3.5%;
 }
 
 /* light mode */
@@ -36,6 +38,8 @@
     --surface: #ffffff;
     --border: #d6d6d6;
     --image-border: #cccccc;
+
+    --grid-opacity: 10%;
 }
 
 html {
@@ -75,6 +79,26 @@ html::-webkit-scrollbar-thumb:hover {
 
 body {
     background-color: var(--background);
+    background-image:
+        linear-gradient(
+            to right,
+            color-mix(in srgb, var(--accent) var(--grid-opacity), transparent)
+                1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            color-mix(in srgb, var(--accent) var(--grid-opacity), transparent)
+                1px,
+            transparent 1px
+        );
+    background-size: 80px 80px;
+    animation: quietGridScroll 25s linear infinite;
+
+    transition:
+        background-color 0.5s ease,
+        color 0.3s ease;
+
     color: var(--text);
     line-height: 1.5;
     font-family:
@@ -92,6 +116,15 @@ body {
 
     padding: 2rem;
     margin: 0;
+}
+
+@keyframes quietGridScroll {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 80px 80px;
+    }
 }
 
 @media (max-width: 750px) {
