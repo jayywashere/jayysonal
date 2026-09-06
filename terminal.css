@@ -2,21 +2,22 @@
     --background: #121212;
     --text: #f5f5f5;
     --text-muted: #d9d9d9;
-    
+
     --border: #262626;
     --topbar-bg: #1a1a1a;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
-    overflow: hidden; 
-    
+    overflow: hidden;
+
     background-color: var(--background);
     color: var(--text);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
 }
 
 body {
@@ -57,17 +58,17 @@ main#terminal-screen {
     padding: 20px;
     background-color: var(--background);
     overflow: hidden; /* Hard block on scrollbars */
-    
+
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; 
+    justify-content: flex-end;
 }
 
 main#terminal-screen p {
     margin: 4px 0 0 0;
     line-height: 1.5;
     color: var(--text-muted);
-    word-break: break-all;
+    overflow-wrap: anywhere;
 }
 
 footer {
@@ -90,6 +91,7 @@ footer {
 
 footer input[type="text"] {
     flex: 1;
+    min-width: 0;
     background: transparent;
     border: none;
     color: var(--text);
@@ -101,4 +103,41 @@ footer input[type="text"] {
 
 footer input[type="text"]::placeholder {
     color: #444;
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 14px;
+    }
+
+    header h1,
+    header nav a {
+        font-size: 0.8rem;
+    }
+
+    main#terminal-screen {
+        padding: 14px;
+    }
+
+    main#terminal-screen p {
+        line-height: 1.4;
+    }
+
+    footer {
+        padding: 12px 14px;
+    }
+
+    .cli-row {
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    #prompt {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    footer input[type="text"] {
+        font-size: 0.9rem;
+    }
 }
