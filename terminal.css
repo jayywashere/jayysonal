@@ -1,3 +1,5 @@
+/* * Variables */
+
 :root {
     --background: #121212;
     --text: #f5f5f5;
@@ -6,6 +8,8 @@
     --border: #262626;
     --topbar-bg: #1a1a1a;
 }
+
+/* * Global */
 
 html,
 body {
@@ -24,6 +28,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* * Header */
 
 header {
     display: flex;
@@ -53,6 +59,8 @@ header nav a:hover {
     color: #ff5f56;
 }
 
+/* * Terminal Screen */
+
 main#terminal-screen {
     flex: 1;
     padding: 20px;
@@ -64,6 +72,8 @@ main#terminal-screen {
     justify-content: flex-end;
 }
 
+/* * Terminal Output */
+
 main#terminal-screen p {
     margin: 4px 0 0 0;
     line-height: 1.5;
@@ -71,17 +81,23 @@ main#terminal-screen p {
     overflow-wrap: anywhere;
 }
 
+/* * Footer */
+
 footer {
     background-color: var(--background);
     padding: 15px 20px;
     border-top: 1px solid var(--border);
 }
 
+/* * Command Line */
+
 .cli-row {
     display: flex;
     gap: 10px;
     align-items: center;
 }
+
+/* * Command Input */
 
 #prompt {
     color: var(--text);
@@ -104,6 +120,8 @@ footer input[type="text"] {
 footer input[type="text"]::placeholder {
     color: #444;
 }
+
+/* * Responsive Layout */
 
 @media (max-width: 480px) {
     header {
