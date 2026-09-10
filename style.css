@@ -579,6 +579,30 @@ button:active {
     margin-bottom: 2rem;
 }
 
+/* * Caution */
+
+#caution > div {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    padding: 1rem;
+
+    transition:
+        transform 150ms ease,
+        border-color 150ms ease;
+}
+
+#caution > div:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--accent);
+}
+
+#caution > div + div {
+    margin-top: 1rem;
+}
+
 /* * Interests */
 
 #interests > ul {
