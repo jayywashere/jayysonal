@@ -48,9 +48,9 @@ async function bootstrapTerminal() {
             let systemResult = run_cmd(cleanValue);
 
             if (systemResult.startsWith("__SUCCESS:CHANGED_NAME:")) {
-                const parsedNewName = systemResult.split(
-                    "__SUCCESS:CHANGED_NAME:",
-                )[1];
+                const parsedNewName =
+                    systemResult.split("__SUCCESS:CHANGED_NAME:")[1] ??
+                    currentUsername;
 
                 currentUsername = parsedNewName;
                 usernameElement.textContent = parsedNewName;

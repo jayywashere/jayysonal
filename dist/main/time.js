@@ -15,3 +15,4 @@ export function initTime() {
     updateTime();
     setInterval(updateTime, 1000);
 }
+//# sourceMappingURL=time.js.map

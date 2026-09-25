@@ -120,3 +120,4 @@ export function initFun() {
         }
     });
 }
+//# sourceMappingURL=fun.js.map

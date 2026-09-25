@@ -11,3 +11,4 @@ export function initReadingProgress() {
     window.addEventListener("scroll", updateProgress);
     updateProgress();
 }
+//# sourceMappingURL=reading-progress.js.map

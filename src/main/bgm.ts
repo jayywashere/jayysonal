@@ -56,7 +56,7 @@ export function initBgm(): void {
 
     bgm.addEventListener("ended", () => {
         currIdx = (currIdx + 1) % playlist.length;
-        bgm.src = playlist[currIdx];
+        bgm.src = playlist[currIdx]!;
         bgm.currentTime = 0;
 
         updateDisplayLabel(`🎵 now playing: ${trackNames[currIdx]}`);
@@ -78,7 +78,7 @@ export function initBgm(): void {
         } else {
             if (bgm.currentTime === 0 || bgm.paused) {
                 currIdx = Math.floor(Math.random() * playlist.length);
-                bgm.src = playlist[currIdx];
+                bgm.src = playlist[currIdx]!;
             }
 
             updateDisplayLabel(`🎵 now playing: ${trackNames[currIdx]}`);

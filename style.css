@@ -762,6 +762,11 @@ nav ul li:hover ~ li {
     transform: translateX(10px);
 }
 
+nav ul:first-child {
+    display: flex;
+    justify-content: center;
+}
+
 /* * Links */
 
 a {

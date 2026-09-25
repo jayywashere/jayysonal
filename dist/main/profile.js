@@ -4,3 +4,4 @@ export function initProfilePic() {
         profilePic.classList.toggle("spinning");
     });
 }
+//# sourceMappingURL=profile.js.map

@@ -13,3 +13,4 @@ function main() {
     initBgm();
 }
 main();
+//# sourceMappingURL=main.js.map

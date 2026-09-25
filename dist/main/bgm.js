@@ -82,3 +82,4 @@ export function initBgm() {
     }
     disc?.addEventListener("click", togglePlayback);
 }
+//# sourceMappingURL=bgm.js.map
